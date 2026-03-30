@@ -18,8 +18,8 @@ const projects = [
     title: 'Loboprints — Printing Services',
     category: 'Web Development',
     description: 'Service site for Loboprints with catalog and contact flows.',
-    img: '/images/LoboPrint.jpg',
-    screenshots: ['/images/LoboPrint.jpg'],
+    img: '/images/loboprint.jpg',
+    screenshots: ['/images/loboprint.jpg'],
     demo: 'https://loboprints.in',
     results: ['Improved lead capture', 'Mobile-optimized catalog', 'CMS for easy updates']
   },
@@ -28,8 +28,8 @@ const projects = [
     title: 'Lobostore — E‑commerce',
     category: 'E‑commerce',
     description: 'Full e-commerce storefront with product pages and checkout.',
-    img: '/images/lobostore.svg',
-    screenshots: ['/images/lobostore.svg','/images/lobostore.svg'],
+    img: '/images/lobo.jpg',
+    screenshots: ['/images/lobo.jpg','/images/lobo.jpg'],
     demo: 'https://lobostore.in',
     results: ['Custom checkout', 'Payment integrations', 'Performance optimizations']
   },
@@ -69,27 +69,26 @@ export default function Portfolio(){
           <div className="portfolio-grid">
             {projects.map(p => (
               <article key={p.id} className="project-card">
-                <img src={p.img} alt={p.title} loading="lazy" />
-                <div style={{padding: '8px'}}>
-                  <div style={{fontSize: '12px', fontWeight: '700', color: '#1f6feb', textTransform: 'uppercase', marginBottom: '8px', letterSpacing: '0.5px'}}>
-                    {p.category}
-                  </div>
-                  <h3 style={{fontSize: '18px', margi: '12px 0', fontWeight: '700'}}>{p.title}</h3>
-                  <p style={{color: '#6b7280', fontSize: '14px', lineHeight: '1.6', marginBottom: '12px'}}>{p.description}</p>
-                  <div style={{borderTop: '1px solid #e2e8f0', paddingTop: '12px'}}>
-                    <p style={{fontSize: '12px', fontWeight: '600', color: '#1f6feb', marginBottom: '8px'}}>Key Results:</p>
-                    <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
+                <div className="project-media">
+                  <img src={p.img} alt={p.title} loading="lazy" />
+                </div>
+                <div className="project-content">
+                  <div className="project-meta">{p.category}</div>
+                  <h3 className="project-title">{p.title}</h3>
+                  <p className="project-desc">{p.description}</p>
+
+                  <div className="project-results">
+                    <p className="muted strong">Key Results:</p>
+                    <ul>
                       {p.results.map((result, idx) => (
-                        <li key={idx} style={{fontSize: '13px', color: '#6b7280', marginBottom: '4px', paddingLeft: '16px', position: 'relative'}}>
-                          <span style={{position: 'absolute', left: 0, color: '#1f6feb', fontWeight: '700'}}>✓</span>
-                          {result}
-                        </li>
+                        <li key={idx}>{result}</li>
                       ))}
                     </ul>
-                    <div style={{marginTop:12, display:'flex', gap:8}}>
-                      <button className="btn" onClick={()=>setPreview(p)}>Live Preview</button>
-                      <a className="btn primary" href={p.demo} target="_blank" rel="noopener noreferrer">Open live</a>
-                    </div>
+                  </div>
+
+                  <div className="project-actions">
+                    <button className="btn" onClick={()=>setPreview(p)}>Live Preview</button>
+                    <a className="btn primary" href={p.demo} target="_blank" rel="noopener noreferrer">Open live</a>
                   </div>
                 </div>
               </article>
