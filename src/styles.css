@@ -585,6 +585,14 @@ body {
 .preview-body{background:var(--bg);min-height:420px;display:flex;align-items:center;justify-content:center}
 .preview-body iframe{width:100%;height:560px;border:0}
 .preview-loading{padding:40px;color:var(--muted)}
+.preview-loading{display:flex;flex-direction:column;align-items:center;gap:12px}
+
+.spinner{width:48px;height:48px;border-radius:50%;border:6px solid rgba(31,111,235,0.12);border-top-color:var(--accent);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.screenshot-controls{display:flex;align-items:center;gap:8px;margin-top:8px}
+.screenshot-counter{font-size:13px;color:var(--muted)}
+
 .preview-fallback{display:flex;gap:18px;padding:24px;align-items:center}
 .preview-fallback .screenshot-wrap{flex:0 0 380px}
 .preview-fallback img{width:100%;height:auto;border-radius:8px}

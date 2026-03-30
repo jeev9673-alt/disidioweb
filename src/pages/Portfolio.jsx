@@ -8,7 +8,8 @@ const projects = [
     title: 'Fraapos — SaaS Platform',
     category: 'Web Development',
     description: 'Marketing site and landing for Fraapos SaaS offering.',
-    img: '/images/fraapos.svg',
+    img: '/images/fraapos.png',
+    screenshots: ['/images/fraapos.png','/images/fraapos-2.png'],
     demo: 'https://fraapos.com',
     results: ['Clear product messaging', 'Fast first paint', 'Conversion-focused CTAs']
   },
@@ -17,7 +18,8 @@ const projects = [
     title: 'Loboprints — Printing Services',
     category: 'Web Development',
     description: 'Service site for Loboprints with catalog and contact flows.',
-    img: '/images/loboprints.svg',
+    img: '/images/loboprints.png',
+    screenshots: ['/images/loboprints.png'],
     demo: 'https://loboprints.in',
     results: ['Improved lead capture', 'Mobile-optimized catalog', 'CMS for easy updates']
   },
@@ -26,7 +28,8 @@ const projects = [
     title: 'Lobostore — E‑commerce',
     category: 'E‑commerce',
     description: 'Full e-commerce storefront with product pages and checkout.',
-    img: '/images/lobostore.svg',
+    img: '/images/lobostore.png',
+    screenshots: ['/images/lobostore.png','/images/lobostore-2.png'],
     demo: 'https://lobostore.in',
     results: ['Custom checkout', 'Payment integrations', 'Performance optimizations']
   },
