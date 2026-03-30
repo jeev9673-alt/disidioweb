@@ -116,6 +116,5 @@ export default function Portfolio(){
           <Link to="/contact" className="btn primary">Start Your Project</Link>
         </div>
       </section>
-    </>
-  )
+    </>  )
 }

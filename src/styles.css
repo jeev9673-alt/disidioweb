@@ -619,10 +619,11 @@ body {
 
 /* ============ FOOTER ============ */
 .site-footer {
-  padding: 0;
-  background: var(--bg-dark);
+  padding: 60px 0 20px;
+  background: linear-gradient(180deg, #071026 0%, #071625 100%);
   color: #cbd5e1;
   margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,0.02);
 }
 
 /* ============ PREVIEW MODAL ============ */
@@ -658,10 +659,10 @@ body {
 }
 
 .footer-section h4 {
-  color: var(--white);
-  margin: 0 0 20px;
+  color: #ffffff;
+  margin: 0 0 18px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .footer-section p {
@@ -682,18 +683,18 @@ body {
 }
 
 .footer-section a {
-  color: #a0aec0;
+  color: #cbd5e1;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.18s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 500;
+  gap: 10px;
+  font-weight: 600;
 }
 
 .footer-section a:hover {
   color: var(--accent-light);
-  gap: 12px;
+  transform: translateY(-2px);
 }
 
 .social-links {
@@ -705,8 +706,30 @@ body {
 .social-links a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
+
+.social {
+  display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:10px;color:inherit;background:transparent;border:0;width:fit-content
+}
+.social .icon-circle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.social:hover{background:rgba(255,255,255,0.03);transform:translateY(-3px)}
+
+.contact-link{display:inline-flex;align-items:center;gap:10px;color:inherit}
+.contact-link svg{opacity:0.95}
+.contact-addr{color:var(--muted);font-size:14px}
+
+/* Brand color variants for social icons */
+.social.instagram .icon-circle{background:linear-gradient(135deg,#feda75 0%,#fa7e1e 30%,#d62976 60%,#962fbf 100%);color:#fff}
+.social.facebook .icon-circle{background:linear-gradient(135deg,#1877f2 0%,#2d6cdf 100%);color:#fff}
+.ocial-facebook .icon-circle{background:linear-gradient(135deg,#1877f2 0%,#2d6cdf 100%);color:#fff}
+.social.x .icon-circle{background:linear-gradient(135deg,#14171a 0%,#1f2937 100%);color:#fff}
+.social.linkedin .icon-circle{background:linear-gradient(135deg,#0a66c2 0%,#005582 100%);color:#fff}
+
+.footer-section a span{display:inline-block}
+
+.footer-bottom{background:transparent;padding:20px 0;border-top:1px solid rgba(255,255,255,0.03)}
+.footer-bottom p{color:#94a3b8;margin:0}
 
 .tagline-sm {
   font-size: 13px;
