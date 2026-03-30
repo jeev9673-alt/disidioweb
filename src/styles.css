@@ -81,6 +81,20 @@ body {
   gap: 8px;
 }
 
+/* Mobile menu button */
+.menu-btn{
+  display:none;
+  background:transparent;
+  border:0;
+  width:44px;height:40px;
+  align-items:center;justify-content:center;
+  cursor:pointer;
+}
+.menu-btn .bar{display:block;width:22px;height:2px;background:var(--text-dark);margin:4px 0;border-radius:2px;transition:all .25s}
+.menu-btn.open .bar:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn.open .bar:nth-child(2){opacity:0}
+.menu-btn.open .bar:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
 .links a {
   padding: 8px 16px;
   text-decoration: none;
@@ -109,6 +123,24 @@ body {
 .links a.cta:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+}
+
+/* Responsive: collapse nav on small screens */
+@media (max-width: 800px){
+  .nav-inner{height:auto;padding:12px 0}
+  .menu-btn{display:flex}
+  .links{position:absolute;top:70px;right:24px;flex-direction:column;gap:8px;background:var(--white);padding:12px;border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow-lg);display:none;min-width:200px}
+  .links.open{display:flex}
+  .links a{padding:10px 14px}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-copy h1{font-size:36px}
+}
+
+@media (max-width:480px){
+  .links{right:12px;left:12px;top:64px}
+  .links a{font-size:15px}
+  .brand{font-size:20px}
+  .hero-copy h1{font-size:28px}
 }
 
 /* ============ HERO SECTION ============ */
