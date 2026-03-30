@@ -7,6 +7,7 @@ export default function Navbar(){
       <div className="nav-inner container">
         <Link to="/" className="brand">DiSidio Labs</Link>
         <nav className="links">
+          <Link to="/">Home</Link>
           <Link to="/services">Services</Link>
           <Link to="/portfolio">Portfolio</Link>
           <Link to="/about">About</Link>
