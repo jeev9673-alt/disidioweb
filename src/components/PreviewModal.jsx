@@ -13,25 +13,16 @@ export default function PreviewModal({ project, onClose }){
     const iframe = iframeRef.current
     let timer = null
 
-    function handleLoad(){
-      setStatus('ready')
-      clearTimeout(timer)
-    }
-
-    if(iframe){
-      iframe.addEventListener('load', handleLoad)
-      // fallback timeout: if load doesn't fire, assume blocked
-      timer = setTimeout(()=>{
-        setStatus(prev => prev === 'ready' ? 'ready' : 'blocked')
-      }, 2000)
-    }
+    // fallback timeout: if load doesn't fire, assume blocked
+    timer = setTimeout(()=>{
+      setStatus(prev => prev === 'ready' ? 'ready' : 'blocked')
+    }, 2000)
 
     // ESC handler
     function onKey(e){ if(e.key === 'Escape') onClose() }
     window.addEventListener('keydown', onKey)
 
     return ()=>{
-      if(iframe) iframe.removeEventListener('load', handleLoad)
       clearTimeout(timer)
       window.removeEventListener('keydown', onKey)
     }
@@ -72,9 +63,15 @@ export default function PreviewModal({ project, onClose }){
             </div>
           )}
 
-          {status === 'ready' && (
-            <iframe ref={iframeRef} title={project.title} src={project.demo} frameBorder="0" sandbox="allow-same-origin allow-scripts allow-forms allow-popups" />
-          )}
+          <iframe
+            ref={iframeRef}
+            title={project.title}
+            src={project.demo}
+            frameBorder="0"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            style={{display: status === 'ready' ? 'block' : 'none', width: '100%', height: 560}}
+            onLoad={() => setStatus('ready')}
+          />
 
           {status === 'blocked' && (
             <div className="preview-fallback" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
