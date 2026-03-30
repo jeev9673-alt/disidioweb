@@ -35,12 +35,13 @@ const projects = [
   },
   {
     id: 4,
-    title: 'SaaS Dashboard Redesign',
-    category: 'UI/UX',
-    description: 'Redesigned a complex SaaS dashboard for clarity and efficiency.',
-    img: '/images/project1.svg',
-    demo: '#',
-    results: ['Reduced task time', 'Improved adoption']
+    title: 'Colf Frontend — React App',
+    category: 'Frontend',
+    description: 'Frontend for Colf — built with React + Vite and deployed on Vercel.',
+    img: '/images/colf.jpg',
+    screenshots: ['/images/colf.jpg'],
+    demo: 'https://colf-frontend.vercel.app',
+    results: ['Responsive UI', 'Vercel deployment', 'React + Vite']
   },
   {
     id: 5,
