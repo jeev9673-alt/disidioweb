@@ -79,7 +79,6 @@ export default function Portfolio(){
                   <img src={project.img} alt={p.title} loading="lazy" />
                 </div>
                 <div className="project-content">
-                <div className="project-content">
                   <div className="project-meta">{project.category}</div>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-desc">{project.description}</p>
@@ -87,18 +86,17 @@ export default function Portfolio(){
                   <div className="project-results">
                     <p className="muted strong">Key Results:</p>
                     <ul>
-                        {project.results.map((result, idx) => (
+                        {project.results && project.results.map((result, idx) => (
                           <li key={idx}>{result}</li>
                         ))}
                     </ul>
                   </div>
 
-                    <div className="project-actions">
-                      <button className="btn" onClick={()=>setPreview(project)}>Live Preview</button>
-                      <a className="btn primary" href={project.demo} target="_blank" rel="noopener noreferrer">Open live</a>
-                    </div>
+                  <div className="project-actions">
+                    <button className="btn" onClick={()=>setPreview(project)}>Live Preview</button>
+                    <a className="btn primary" href={project.demo} target="_blank" rel="noopener noreferrer">Open live</a>
                   </div>
-                  </div>
+                </div>
                 </article>
               )
               })}

@@ -36,11 +36,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+/* Layout container */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
 
 /* ============ NAVIGATION ============ */
 .nav {
@@ -136,6 +133,9 @@ body {
   .links a{padding:10px 14px}
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .hero-copy h1{font-size:36px}
+  .portfolio-grid{grid-template-columns:1fr;gap:18px}
+  .project-media img{height:180px}
+  .preview-panel{width:96%;max-width:920px}
 }
 
 @media (max-width:480px){
@@ -286,6 +286,7 @@ body {
 /* ============ SECTIONS ============ */
 .section {
   padding: 80px 0;
+  background: transparent;
 }
 
 .section h2 {
@@ -318,6 +319,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
   margin-top: 0;
+}
+/* Portfolio specific grid - keeps cards responsive */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 .project-card {
   background: #fff;
@@ -633,8 +640,8 @@ body {
 .preview-header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border)}
 .preview-header h3{margin:0;font-size:18px}
 .preview-header .btn{margin-left:8px}
-.preview-body{background:var(--bg);min-height:420px;display:flex;align-items:center;justify-content:center}
-.preview-body iframe{width:100%;height:560px;border:0}
+.preview-body{background:var(--bg);min-height:220px;display:flex;align-items:center;justify-content:center}
+.preview-body iframe{width:100%;height:min(70vh,560px);border:0}
 .preview-loading{padding:40px;color:var(--muted)}
 .preview-loading{display:flex;flex-direction:column;align-items:center;gap:12px}
 
