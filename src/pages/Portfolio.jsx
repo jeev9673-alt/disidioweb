@@ -2,45 +2,50 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const projects = [
-  { 
-    id: 1, 
-    title: 'SaaS Dashboard Redesign', 
-    category: 'UI/UX Design',
-    description: 'Complete redesign of a SaaS dashboard focusing on user experience and conversion optimization.',
-    img: '/images/project1.svg', 
-    results: ['40% increase in user engagement', 'Improved user retention', 'Better data visualization']
-  },
-  { 
-    id: 2, 
-    title: 'E-commerce Landing', 
+  {
+    id: 1,
+    title: 'Fraapos — SaaS Platform',
     category: 'Web Development',
-    description: 'High-converting landing page for an e-commerce brand with optimized checkout flow.',
+    description: 'Marketing site and landing for Fraapos SaaS offering.',
+    img: '/images/fraapos.svg',
+    demo: 'https://fraapos.com',
+    results: ['Clear product messaging', 'Fast first paint', 'Conversion-focused CTAs']
+  },
+  {
+    id: 2,
+    title: 'Loboprints — Printing Services',
+    category: 'Web Development',
+    description: 'Service site for Loboprints with catalog and contact flows.',
+    img: '/images/loboprints.svg',
+    demo: 'https://loboprints.in',
+    results: ['Improved lead capture', 'Mobile-optimized catalog', 'CMS for easy updates']
+  },
+  {
+    id: 3,
+    title: 'Lobostore — E‑commerce',
+    category: 'E‑commerce',
+    description: 'Full e-commerce storefront with product pages and checkout.',
+    img: '/images/lobostore.svg',
+    demo: 'https://lobostore.in',
+    results: ['Custom checkout', 'Payment integrations', 'Performance optimizations']
+  },
+  {
+    id: 4,
+    title: 'SaaS Dashboard Redesign',
+    category: 'UI/UX',
+    description: 'Redesigned a complex SaaS dashboard for clarity and efficiency.',
+    img: '/images/project1.svg',
+    demo: '#',
+    results: ['Reduced task time', 'Improved adoption']
+  },
+  {
+    id: 5,
+    title: 'E‑commerce Landing',
+    category: 'UI/UX',
+    description: 'Landing page focused on conversions and product storytelling.',
     img: '/images/project2.svg',
-    results: ['25% higher conversion rate', 'Responsive design', 'Mobile-first approach']
-  },
-  { 
-    id: 3, 
-    title: 'Mobile App UI', 
-    category: 'Mobile Design',
-    description: 'Native mobile app interface design with seamless user experience across iOS and Android.',
-    img: '/images/project3.svg',
-    results: ['Intuitive navigation', '4.8 star rating', 'Smooth animations']
-  },
-  { 
-    id: 4, 
-    title: 'Agency Website', 
-    category: 'Web Design & Development',
-    description: 'Portfolio website for a creative agency showcasing their work and services professionally.',
-    img: '/images/project4.svg',
-    results: ['SEO optimized', 'Fast loading', 'Beautiful design']
-  },
-  { 
-    id: 5, 
-    title: 'Brand Identity Pack', 
-    category: 'Branding',
-    description: 'Complete brand identity system including logo, color palette, typography, and guidelines.',
-    img: '/images/project5.svg',
-    results: ['Cohesive brand system', 'Professional guidelines', 'Memorable design']
+    demo: '#',
+    results: ['Higher engagement', 'A/B test winners']
   }
 ]
 
