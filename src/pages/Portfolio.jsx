@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PreviewModal from '../components/PreviewModal'
 
 const projects = [
   {
@@ -50,6 +51,7 @@ const projects = [
 ]
 
 export default function Portfolio(){
+  const [preview, setPreview] = useState(null)
   return (
     <>
       <section className="section" style={{paddingTop: '120px', background: 'linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%)'}}>
@@ -81,6 +83,10 @@ export default function Portfolio(){
                         </li>
                       ))}
                     </ul>
+                    <div style={{marginTop:12, display:'flex', gap:8}}>
+                      <button className="btn" onClick={()=>setPreview(p)}>Live Preview</button>
+                      <a className="btn primary" href={p.demo} target="_blank" rel="noopener noreferrer">Open live</a>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -88,6 +94,10 @@ export default function Portfolio(){
           </div>
         </div>
       </section>
+
+      {preview && (
+        <PreviewModal project={preview} onClose={()=>setPreview(null)} />
+      )}
 
       <section className="section cta-section">
         <div className="container cta-content">

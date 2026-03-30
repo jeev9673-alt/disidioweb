@@ -575,6 +575,23 @@ body {
   margin-top: 80px;
 }
 
+/* ============ PREVIEW MODAL ============ */
+.preview-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center}
+.preview-backdrop{position:fixed;inset:0;background:rgba(10,14,20,0.5)}
+.preview-panel{position:relative;z-index:10000;background:var(--white);width:92%;max-width:1100px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-xl);}
+.preview-header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border)}
+.preview-header h3{margin:0;font-size:18px}
+.preview-header .btn{margin-left:8px}
+.preview-body{background:var(--bg);min-height:420px;display:flex;align-items:center;justify-content:center}
+.preview-body iframe{width:100%;height:560px;border:0}
+.preview-loading{padding:40px;color:var(--muted)}
+.preview-fallback{display:flex;gap:18px;padding:24px;align-items:center}
+.preview-fallback .screenshot-wrap{flex:0 0 380px}
+.preview-fallback img{width:100%;height:auto;border-radius:8px}
+.fallback-text{flex:1}
+.fallback-text p{color:var(--muted);margin-bottom:12px}
+
+
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
