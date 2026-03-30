@@ -18,8 +18,8 @@ const projects = [
     title: 'Loboprints — Printing Services',
     category: 'Web Development',
     description: 'Service site for Loboprints with catalog and contact flows.',
-    img: '/images/loboprint.jpg',
-    screenshots: ['/images/loboprint.jpg'],
+    img: '/images/LoboPrint.jpg',
+    screenshots: ['/images/LoboPrint.jpg'],
     demo: 'https://loboprints.in',
     results: ['Improved lead capture', 'Mobile-optimized catalog', 'CMS for easy updates']
   },
@@ -28,8 +28,8 @@ const projects = [
     title: 'Lobostore — E‑commerce',
     category: 'E‑commerce',
     description: 'Full e-commerce storefront with product pages and checkout.',
-    img: '/images/lobo.jpg',
-    screenshots: ['/images/lobo.jpg','/images/lobo.jpg'],
+    img: '/images/Lobo.jpg',
+    screenshots: ['/images/Lobo.jpg','/images/Lobo.jpg'],
     demo: 'https://lobostore.in',
     results: ['Custom checkout', 'Payment integrations', 'Performance optimizations']
   },
@@ -96,8 +96,10 @@ export default function Portfolio(){
                       <button className="btn" onClick={()=>setPreview(project)}>Live Preview</button>
                       <a className="btn primary" href={project.demo} target="_blank" rel="noopener noreferrer">Open live</a>
                     </div>
-                </div>
-              </article>
+                  </div>
+                  </div>
+                </article>
+              )
               })}
           </div>
         </div>
