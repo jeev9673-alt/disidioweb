@@ -67,32 +67,38 @@ export default function Portfolio(){
           </div>
 
           <div className="portfolio-grid">
-            {projects.map(p => (
-              <article key={p.id} className="project-card">
+            {projects.map(p => {
+              const base = import.meta.env.BASE_URL || '/'
+              const imgSrc = p.img && p.img.startsWith('/') ? base + p.img.replace(/^\//, '') : (p.img || '')
+              const screenshots = (p.screenshots || []).map(s => s && s.startsWith('/') ? base + s.replace(/^\//, '') : s)
+              const project = { ...p, img: imgSrc, screenshots }
+              return (
+                <article key={p.id} className="project-card">
                 <div className="project-media">
-                  <img src={p.img} alt={p.title} loading="lazy" />
+                  <img src={project.img} alt={p.title} loading="lazy" />
                 </div>
                 <div className="project-content">
-                  <div className="project-meta">{p.category}</div>
-                  <h3 className="project-title">{p.title}</h3>
-                  <p className="project-desc">{p.description}</p>
+                <div className="project-content">
+                  <div className="project-meta">{project.category}</div>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-desc">{project.description}</p>
 
                   <div className="project-results">
                     <p className="muted strong">Key Results:</p>
                     <ul>
-                      {p.results.map((result, idx) => (
-                        <li key={idx}>{result}</li>
-                      ))}
+                        {project.results.map((result, idx) => (
+                          <li key={idx}>{result}</li>
+                        ))}
                     </ul>
                   </div>
 
-                  <div className="project-actions">
-                    <button className="btn" onClick={()=>setPreview(p)}>Live Preview</button>
-                    <a className="btn primary" href={p.demo} target="_blank" rel="noopener noreferrer">Open live</a>
-                  </div>
+                    <div className="project-actions">
+                      <button className="btn" onClick={()=>setPreview(project)}>Live Preview</button>
+                      <a className="btn primary" href={project.demo} target="_blank" rel="noopener noreferrer">Open live</a>
+                    </div>
                 </div>
               </article>
-            ))}
+              })}
           </div>
         </div>
       </section>
