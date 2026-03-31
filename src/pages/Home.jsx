@@ -33,7 +33,7 @@ export default function Home(){
             </div>
           </div>
           <div className="hero-art">
-            <img src="/disidioweb/images/solution.jpg" alt="DiSidio Labs illustration" style={{borderRadius: '12px'}} />
+            <img src="/images/solution.jpg" alt="DiSidio Labs illustration" style={{borderRadius: '12px'}} />
           </div>
         </div>
       </section>
